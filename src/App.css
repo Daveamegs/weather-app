@@ -1,38 +1,82 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+main{
+  height: 100vh;
+  padding: 25px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+
+}
+.app {
+  width: 380px;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url("./assets/cold-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.6 ease-out;
   text-align: center;
 }
+.app.warm{
+  background-image: url("./assets/warm-bg.jpg");
+  transition: 0.6 ease-out;
+}
+.search-box{
+  width: 100%;
+  margin-top: -25px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+} 
+ .search-bar{
+  width: 100%;
+  padding: 12px;
+  display: block;
+  border: none;
+  appearance: none;
+  outline: none;
+  background: none;
+  border-radius: 0px 0px 12px 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+  color: #313131;
+  font-size: 20px;
+  margin-bottom: 75px;
+}
+.search-bar:focus{
+  background-color: rgba(255, 255, 255, 0.9)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.location-box .location{
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.location-box .date{
+  color: #FFF;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5)
 }
 
-.App-link {
-  color: #61dafb;
+.weather-box .temp{
+  color: #FFF;
+  margin: 30px auto;
+  font-size: 100px;
+  font-weight: 900;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  background-color:rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-box .weather{
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
